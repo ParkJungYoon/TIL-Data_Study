@@ -8,7 +8,7 @@
 
 * Selenium 활용: 스크래핑
     * [개념정리](./Crawling/Selenium_Crawling.ipynb)
-    * [네이버 상영영화 목록 크롤링](./Crawling/Selenium_Crawling_네이버 상영영화 목록.ipynb)
+    * [네이버 상영영화 목록 크롤링](./Crawling/Selenium_Crawling_네이버_상영영화_목록.ipynb)
 
 <br>
 
