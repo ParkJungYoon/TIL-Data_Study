@@ -72,3 +72,29 @@
         
         return result
     ```
+
+### < 소수 판별 >
+```python
+def isPrime(n):
+    if n == 1: 
+        return False
+
+    for i in range(2,n):
+        if n%i == 0:
+            return False
+            
+    return True
+```
+
+* 효율적인 소수 판별
+    * 2를 제외한 모든 소수는 홀수이다.
+    * $\sqrt{n}$ 미만의 자연수 중 n을 나눌 수 있는 수가 없다면, $\sqrt{n}$ 보다 큰 수는 n을 나누지 못한다. (나머지가 0이 될 수 없다.)
+```python
+def isPrime2(n):
+    if n == 1:
+        return False
+    for i in range(2,int(n ** (1/2))+1):
+        if n % i == 0:
+            return False
+    return True
+```
