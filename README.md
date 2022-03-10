@@ -6,10 +6,8 @@
 * 프로그래밍 수학
     1. [정수론: 소수](./Math/number_theory.md)
     2. [수열: 수학적 귀납법](./Math/math_sequence.md)
-    3. 확률과 통계: 경우의 수와 확률
-    4. 선형대수: 벡터와 행렬
+    3. [확률과 통계: 경우의 수와 확률](./Math/statistics.md)
 
-* 프로그래밍 확률과 통계
 
 ## Crawling
 
@@ -27,3 +25,11 @@
     * [Pandas 개념](./Data_Analysis/Pandas.ipynb)
     * [Pandas 연습](./Data_Analysis/Pandas_practice.ipynb)
 * [ADsP](./Data_Analysis/ADsP.md)
+
+<br>
+
+## Database
+* NoSQL
+    * [MongoDB 01 - Intro](/DataBase/MongoDB_1.md)
+    * [MongoDB 02 - CRUD](/DataBase/MongoDB_2.md)
+    * [MongoDB 03 - Query](/DataBase/MongoDB_3.md)
