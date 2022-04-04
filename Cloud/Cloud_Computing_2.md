@@ -4,10 +4,14 @@
 
 ### < 가상화 기술 >
 
+서버의 효율성을 높이기 위해 등장한 기술로 가상화 개념의 시초
+
+가상화를 가능하게 하는 하이퍼바이저(Hypervisor), 하이퍼바이저에 의해 제어되며 각종 애플리케이션을 실행하기 위한 컴퓨팅 환경인 가상 머신(Virtual Machine, VM)으로 구성
+
 - 하이퍼바이저
 
-하이퍼바이저(hypervisor)는 호스트 컴퓨터에서 다수의 운영 체제(operating system)를 동시에 실행하기 위한
-논리적 플랫폼(platform)을 말한다. 가상화 머신 모니터 또는 가상화 머신 매니저(virtual machine monitor 또는 virtual machine manager, 줄여서 VMM)
+하이퍼바이저(hypervisor)는 호스트 컴퓨터에서 다수의 운영 체제(operating system)를 동시에 실행하기 위한 논리적 플랫폼(platform)을 말한다.
+가상화 머신 모니터 또는 가상화 머신 매니저(virtual machine monitor 또는 virtual machine manager, 줄여서 VMM)
 
 <br>
 
