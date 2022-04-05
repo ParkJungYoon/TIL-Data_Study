@@ -3,18 +3,24 @@
 # AWS - Computing: EC2
 
 - AWS 컴퓨팅 서비스 종류
-  : 가상머신, 컨테이너, 서버리스
+  : Instance(가상머신), Container(컨테이너), Serverless(서버리스)
+
+<img src='./img/aws_1.png' width="480px">
+
+<br>
 
 ### 1. EC2 (컴퓨팅 서비스)
 
-Elastic Compute Cloud
+EC2 : Elastic Compute Cloud
 
-AWS의 가상머신 서비스: Instance
+- AWS의 가상머신 서비스: Instance
+- 미리 정의된 템플릿, 혹은 아마존 머신 이미지(AMI)를 통해 즉시 인스턴스 생성 가능.
 
--> IaaS
+-> `IaaS`
 
 < EC2 AMI >
-Amazon Machine Image]
+
+Amazon Machine Image<br>
 인스턴스 실행 시, 필요한 OS, 어플리케이션, 소프트웨어 패키지 등이 사전 구성되어 있는 템플릿이다.
 
 <br>
@@ -25,23 +31,31 @@ Amazon Machine Image]
 
 : 보안 그룹 정책: IP, 포트 번호, 프로토콜 등으로 제어
 
-: 화이트 리스트 형식
+: 화이트 리스트 형식 (기본적으로 모든 접속을 막고 허용되어야 하는 트래픽만 허용)
+
+**(대표적인 Port)**
+
+```
+SSH: 22 / HTTP: 80 / HTTPS: 443 / MYSQL: 1433
+```
 
 <br>
 
 ### 3. AWS 스토리지
 
-1. Direct Attached Storage (DAS) : 컴퓨터에 직접 연결된 스토리지
-2. Network Attached Storage (NAS) : 외장하드와 같이 네트워크를 통해 연결된 스토리지
-3. Storage Area Network (SAN) : 스토리지 고속 네트워크 채널을 통해 구성된 서비스
+서버에 제공 가능한 스토리지 종류
 
-### < EBS / EFS > 스토리지 서비스
+1. Direct Attached Storage (**DAS**) : 컴퓨터에 직접 연결된 스토리지
+2. Network Attached Storage (**NAS**) : 외장하드와 같이 네트워크를 통해 연결된 스토리지
+3. Storage Area Network (**SAN**) : 스토리지 고속 네트워크 채널을 통해 구성된 서비스
 
-- EBS (Elastic Block Store)
+<br>
+
+### < EBS (Elastic Block Store) >
 
 EBS는 EC2와 연결하여 제공할 수 있는 블록 스토리지 볼륨 ‒ SAN 스토리지
 
-AZ 내에 존재하는 블록 스토리지 볼륨
+<u>AZ 내에 존재</u>하는 블록 스토리지 볼륨
 
 높은 수준의 성능이 필요할 때
 
@@ -49,11 +63,13 @@ AZ 내에 존재하는 블록 스토리지 볼륨
 
 적합한 서비스 종류 : 부팅 볼륨, NoSQL, RDBMS와 같은 **데이터베이스, 데이터 웨어 하우징 및 ETL**
 
-- EFS (Elastic File System)
+<br>
+
+### < EFS (Elastic File System) >
 
 EBS는 EC2 와 연결하여 제공할 수 있는 파일 시스템 스토리지 볼륨 ‒ NFS 스토리지
 
-AZ 외부에 존재하는 파일 시스템 스토리지 볼륨
+<u>AZ 외부에 존재</u>하는 파일 시스템 스토리지 볼륨
 
 여러 개의 인스턴스가 동시에 접속이 필요할 때
 
@@ -76,10 +92,30 @@ AZ 외부에 존재하는 파일 시스템 스토리지 볼륨
 
 <br>
 
-### < 로드 밸런서 >
+### < 로드 밸런서 > 분배
 
-ELB는 들어오는 트래픽을 컴퓨팅 서비스에 분산하는 AWS 의 관리형 로드 밸런서
+- ELB (Elastic Load Balancer)
 
-### < 오토 스케일링 그룹 >
+  ELB는 들어오는 트래픽을 컴퓨팅 서비스에 분산하는 AWS 의 관리형 로드 밸런서
+
+- ELB 서비스의 유형으로는 ALB, NLB, CLB
+
+1. Application Load Balancer
+
+   - HTTP, HTTPS (애플리케이션 계층) 지원
+   - L7 로드 밸런서
+   - 경로 기반, 호스트 기반 라우팅
+   - EC2, 컨테이너 애플리케이션 연동 지원
+
+2. Network Load Balancer
+   - TCP, UDP (네트워크 계층) 지원
+   - L4 로드 밸런서
+   - 낮은 지연시간이 요구되는 애플리케이션에 적합
+
+<br>
+
+### < 오토 스케일링 그룹 > 확장
 
 오토 스케일링 그룹은 애플리케이션이 요구하는 컴퓨팅 자원만큼의 인스턴스의 개수를 자동으로 유지 시켜주는 그룹
+
+<img src='./img/aws_2.png' width="500px">
