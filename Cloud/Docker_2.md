@@ -87,3 +87,40 @@ app.py의 권한을 바꿔주는 명령이
 
 - flask app을 만들 때 port를 5000번으로 넣었으면 -p 5000:5000 옵션으로 띄움
   (5001:5000으로 바꿀 수도 있음)
+
+<br>
+
+### < Docker Hub에서 Image Pull하기 >
+
+직접 Docker File을 직접 작성하고 활용하는 것은 어려울 수 있다.
+
+그래서 Docker Image를 받아 사용하는 것도 좋은 방법이다.
+
+### Docker Hub란?
+
+[Docker Hub 사이트](https://hub.docker.com/)
+
+Docker Hub는 Docker 컨테이너 이미지를 위한 세계 최대 라이브러리 및 커뮤니티이다.
+
+특히, Docker Hub에는 사전 빌드된 이미지들이 있어, 직접 구성할 필요 없이 Docker Hub에서 Pull해온 이미지들을 바로 사용할 수 있다.
+
+### 사용 방법
+
+1.  Docker Hub에서 원하는 이미지 이름을 검색
+2.  우측 상단에 해당 이미지를 가져오기 위한 명령어를 복사
+
+- 특정 태그를 붙이지않으면, 가장 최신 버전의 이미지를 가져온다.
+
+3. docker가 실행된 터미널에서 복사한 명령어를 붙여넣기
+
+(Error)
+
+`Got permission denied while trying to connect to the Docker daemon socket at...`
+
+-> 사용자가 /var/run/docker.sock 을 접근하려고 하였지만 권한이 없어 발생하는 문제로, 사용자가 root:docker 권한을 가지고 있어야 하기 때문이다.
+
+(해결방법)
+
+`sudo usermod -a -G docker $USER`
+
+-> 사용자를 docker group에 포함시키도록 변경하면, 정상적으로 실행되는 것을 확인할 수 있다.
