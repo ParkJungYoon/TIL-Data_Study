@@ -59,6 +59,8 @@ chmod 400 elice-keypair01.pem
 ssh -i elice-keypair01.pem ec2-user@<ip주소>
 ```
 
+AWS EC2에서 OS를 어떤 것을 사용했는지에 따라 SSH 로그인 계정이 다르다. ex) ubuntu, ec2-user
+
 - 아마존 리눅스 환경 접속 완료
 
 <br>
