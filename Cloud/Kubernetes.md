@@ -1,5 +1,9 @@
 > ['초보를 위한 쿠버네티스 안내서'](https://www.youtube.com/watch?v=Ia8IfowgU7s&list=PLIUCBpK1dpsNf1m-2kiosmfn2nXfljQgb) 강의를 토대로 작성하였습니다.
 
+> [쿠버네티스 공식 다큐먼트 사이트](https://kubernetes.io/ko/docs/tutorials/kubernetes-basics/create-cluster/cluster-interactive/)
+
+> [추가 강의](https://www.youtube.com/watch?v=xsQsnLIyKoY&ab_channel=NETROBO%EB%84%A4%ED%8A%B8%EB%A1%9C%EB%B3%B4&loop=0)
+
 # k8s - Intro
 
 ## 1.쿠버네티스 시작하기
