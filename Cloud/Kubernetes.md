@@ -1,4 +1,4 @@
-> ['초보를 위한 쿠버네티스 안내서'](https://www.youtube.com/watch?v=Ia8IfowgU7s&list=PLIUCBpK1dpsNf1m-2kiosmfn2nXfljQgb) 강의를 토대로 작성하였습니다.
+> ['초보를 위한 쿠버네티스 안내서'](https://www.youtube.com/watch?v=Ia8IfowgU7s&list=PLIUCBpK1dpsNf1m-2kiosmfn2nXfljQgb)와 ['[따배쿠] 쿠버네티스 시리즈'](https://www.youtube.com/playlist?list=PLApuRlvrZKohaBHvXAOhUD-RxD0uQ3z0c) 강의를 토대로 작성하였습니다.
 
 > [쿠버네티스 공식 다큐먼트 사이트](https://kubernetes.io/ko/docs/tutorials/kubernetes-basics/create-cluster/cluster-interactive/)
 
@@ -6,9 +6,9 @@
 
 # k8s - Intro
 
-## 1.쿠버네티스 시작하기
+# 1.쿠버네티스 시작하기
 
-### 01. 컨테이너 오케스트레이션
+## 01. 컨테이너 오케스트레이션
 
 <br>
 
@@ -59,9 +59,11 @@ Container Orchestration
 
 : <u>복잡한 컨테이너 환경을 효과적으로 관리</u>하기 위한 도구
 
+: 컨테이너를 도커 플랫폼에 올려서 관리+운영+클러스터 서비스 지원해 주는 것
+
 <br>
 
-### 02. 왜 쿠버네티스인가?
+## 02. 왜 쿠버네티스인가?
 
 컨테이너를 쉽고 빠르게 **배포/확장**하고 **관리를 자동화**해주는 오픈소스 플랫폼
 
@@ -75,7 +77,7 @@ Container Orchestration
 
 <br>
 
-### 03. 어떤걸 배울가?
+## 03. 어떤걸 배울가?
 
 1. 도커 컨테이너 실행하기: 도커와 도커컴포즈를 이용한 멀티 컨테이너 관리
 2. 쿠버네티스에 컨테이너 배포하기: kubectl 사용법, pod, deployment, service 등 기본 리소스 학습
@@ -85,13 +87,13 @@ Container Orchestration
 
 <br>
 
-## 2. 쿠버네티스 알아보기
+# 2. 쿠버네티스 알아보기
 
 **클라우드 환경**에 어울리는 배포 시스템이 **쿠버네티스**
 
 <br>
 
-### 02. 쿠버네티스 아키텍처
+## 02. 쿠버네티스 아키텍처
 
 ### [원하는 상태]
 
