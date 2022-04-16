@@ -79,7 +79,8 @@ AWS EC2에서 OS를 어떤 것을 사용했는지에 따라 SSH 로그인 계정
 
 - `PuTTY` 실행
 - `SSH > Auth > private key file 업로드`
-- `Section > Host Name for IP address` 에 `ec2-user@<ip주소>`
+- `Section > Host Name for IP address` 에 `ec2-user@<퍼블릭 IPv4 주소>` or `<퍼블릭 IPv4 DNS>`
 - `saved-sections에 입력 > save`
 - `open > Accept`
 - 리눅스 환경으로 접속 완료
+- login as : ubuntu 등 어떤 AMI로 띄웠는지에 따라 아이디 달라짐.
