@@ -16,7 +16,16 @@
 ### 2-1. VM vs Container
 
 - VM: host OS 위에 '각각' 게스트 OS를 가상화해서 사용하는 방식
+
+하지만 요즘은 vertical 하게 scale up 하는게 아니라 수평적으로 scale out을 한다.
+
 - Container: 하나의 커널내에서 환경을 격리시키고 host 하드웨어 자원을 '공유'해서 사용하는 방식
+
+< 컨테이너 계층 구조 >
+
+<img src="./img/docker_1.png" width='500px'>
+
+<br>
 
 ### 3. 이미지
 
