@@ -27,6 +27,59 @@ CI를 통해 release 준비를 하고 그 다음 최종 배포를 거치게 된�
 
 <br>
 
+### 예시 (CircleCI)
+
+```
+# .circleci/config.yml
+
+version: 2.1
+
+orbs:
+  node: circleci/node@4.1
+
+jobs:
+  test: # test job
+    docker:
+      - image: <아이디>/node_app:0.0.1 # test를 실행할 node image
+    steps:
+      - checkout
+      - node/install-packages: # yarn을 통해 package 설치
+          pkg-manager: yarn
+      - run: CURRENT_PATH=$(pwd)
+      - run: sudo touch ${CURRENT_PATH}/.env.test # .env.test 환경 변수 파일 생성
+      - run:
+          name: "Setting environment vars for test env" # 테스트 환경을 위한 .env.test 파일 구성
+          command: |
+            echo "DATABASE_URL=${DATABASE_URL_TEST}" | sudo tee -a ${CURRENT_PATH}/.env.test
+            echo "PORT=${PORT}" | sudo tee -a ${CURRENT_PATH}/.env.test
+            echo "SECRET=${SECRET}" | sudo tee -a ${CURRENT_PATH}/.env.test
+      - run: yarn install # install packages
+      - run: yarn test    # start test with jest
+  deploy:  # deploy job
+    docker:
+      - image: <아이디>/node_app:0.0.1
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - ${FINGERPRINTS} # ssh public key를 사용할 fingerprints
+      - run:
+          name: "Run deploy script" # start deploy, 서버에 접속하여 deploy.sh 실행
+          command: |
+            ssh -o StrictHostKeyChecking=no ${HOST}@${HOSTNAME} /${TARGET_DIR}/deploy.sh
+workflows:
+  test-and-deploy: # workflow 이름
+    jobs:
+      - test  # test job
+      - deploy:
+          requires: # test가 끝나야 deploy 실행
+              - test
+          filters:
+              branches:
+                only: main # main 브랜치에 push 됐을 때만 실행
+```
+
+<br>
+
 ### tool 종류
 
 1. Jenkins : Buildkite
