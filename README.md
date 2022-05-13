@@ -1,6 +1,6 @@
 # Data Study
 
-- 데이터베이스와 데이터분석, 머신러닝, 인공지능 등을 공부하고 기록하는 저장소입니다.
+- 데이터베이스와 데이터분석, CS 지식 등을 공부하고 기록하는 저장소입니다.
 
 ## Database
 
@@ -25,7 +25,12 @@
 - [Docker 02 - 실습](./Cloud/Docker_2.md)
 - [Kubernetes 01 - Intro](./Cloud/Kubernetes.md)
 
-<br>
+## CS
+
+- [마이크로서비스 아키텍처 (MSA)]
+- [CI/CD 01 - Intro](./CS/CI%2CCD_1.md)
+
+  <br>
 
 ## Math 기초
 
