@@ -24,11 +24,12 @@
 - [Docker 01 - Intro](./Cloud/Docker_1.md)
 - [Docker 02 - 실습](./Cloud/Docker_2.md)
 - [Kubernetes 01 - Intro](./Cloud/Kubernetes.md)
+- [CI/CD 01 - Intro](./CS/CI%2CCD_1.md)
+- [CI/CD 02 - Jenkins](./CS/CI%2CCD_1.md)
 
 ## CS
 
 - [마이크로서비스 아키텍처 (MSA)]
-- [CI/CD 01 - Intro](./CS/CI%2CCD_1.md)
 
   <br>
 
